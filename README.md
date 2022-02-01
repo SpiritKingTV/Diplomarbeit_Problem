@@ -19,9 +19,8 @@ Diese Bearbeiten:
   Zeile 88: Permissions
 ### Wichtigsten Buildozer befehle:
 * Buildozer android debug... Kompiliert und erstellt dann im bin-Ordner die apk file
-* buildozer android deploy... vorheriges + installiert sie direkt am Handy, wenn es angeschlossen ist + USB-Debugging aktiviert ist
+* buildozer android deploy... vorheriges + installiert sie direkt am Handy, wenn es angeschlossen ist + [USB-Debugging](https://mobilsicher.de/ratgeber/usb-debugging-aktivieren) aktiviert ist
 
 
 
-[Getting started with Markdown](https://mobilsicher.de/ratgeber/usb-debugging-aktivieren)
   
