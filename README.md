@@ -9,7 +9,7 @@ main.py, main.kv und alle png files in einen Ordner verschieben
  * python3
  * kivy
  * kivymd
- * xcamera (von kivy_garden)
+ * XCamera (von kivy_garden)
 ## Was dann?
 buildozer init
 buildozer.spec wird erstellt...
