@@ -22,7 +22,8 @@ Diese Bearbeiten:
 * Buildozer android debug... Kompiliert und erstellt dann im bin-Ordner die apk file
 * buildozer android deploy... vorheriges + installiert apk direkt am Handy, wenn es angeschlossen ist + [USB-Debugging](https://mobilsicher.de/ratgeber/usb-debugging-aktivieren) aktiviert ist
 * buildozer android deploy run... vorheriges + führt App am Handy direkt aus
-* 
+* buildozer android deploy run logcat ... vorheriges + startet zusätzlich logcat
+* ... wichtige Befehle mit buildozer help
 
 
 
