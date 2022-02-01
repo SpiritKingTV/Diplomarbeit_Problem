@@ -7,8 +7,8 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.popup import Popup
 from kivy.uix.screenmanager import Screen, ScreenManager, NoTransition
 from kivymd.app import MDApp
-from kivy.lang import Builder
-from kivy_garden.xcamera import XCamera
+
+
 
 from test import LoadDialog
 
