@@ -23,7 +23,8 @@ if platform == "android":
             print("Error in Permissions xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 
 
-    request_permissions([Permission.CAMERA,Permission.WRITE_EXTERNAL_STORAGE,Permission.READ_EXTERNAL_STORAGE], callback)
+    request_permissions([Permission.CAMERA, Permission.WRITE_EXTERNAL_STORAGE, Permission.READ_EXTERNAL_STORAGE,
+                         Permission.MANAGE_DOCUMENTS], callback)
 
 
 class MainScreen(Screen):
@@ -34,16 +35,13 @@ class MainScreen(Screen):
         camera.export_to_png("IMG_{}.png".format(timestr))
         print("Captured")
 
-
-    #Change Picturre in UploadScreen
+    # Change Picturre in UploadScreen
     def selected_img_upload(self, filename):
         try:
             self.ids.input_img.source = filename[0]
             print("deploy to UploadScreen Worked")
         except:
             pass
-
-
 
 
 class CameraScreen(Screen):
@@ -80,7 +78,7 @@ class LoadDialog(FloatLayout):
             pass
 
     def img_send_to_main(self, filename):
-        MainScreen.selected_img_upload(MainScreen,filename[0])
+        MainScreen.selected_img_upload(MainScreen, filename[0])
         print("Filename:")
         print(filename[0])
         self.cancel()
@@ -106,5 +104,6 @@ class mainApp(MDApp):
     def picture_taken(self):
         print("Foto wurde gemacht")
     # Get Pic for upload screen
+
 
 mainApp().run()
