@@ -1,4 +1,9 @@
-# ScreenManager:
+#: import XCamera kivy_garden.xcamera
+ScreenManager:
+    MainScreen
+    HomeScreen
+    UploadScreen
+    CameraScreen
 <MainScreen>:
     MDBottomNavigation:
         MDBottomNavigationItem:
@@ -15,59 +20,22 @@
             icon:"camera"
             XCamera:
                 id:camera
-                on_picture_taken:app.picture_taken()
         MDBottomNavigationItem:
             name:"upload_screen"
             text:"upload"
             icon:"upload"
-            UploadScreen:
+            MDBoxLayout:
+                orientation:"vertical"
+                GridLayout:
+                    cols:2
+                    Image:
+                        id:input_img
+                        source:"Input-Img.png"
+                    Image:
+                        id:output_img
+                        source:"Output-Img.png"
 
-
-
-<LoadDialog>
-    BoxLayout:
-        size:root.size
-        pos:root.pos
-        orientation:"vertical"
-        Image:
-            id: dialog_prev
-            source: "Input-Img.png"
-        FileChooserIconView:
-            id: filechooser
-            path:"."
-            on_selection: root.selected_file(filechooser.selection)
-        BoxLayout:
-            size_hint_y:None
-            height:30
-            MDRectangleFlatButton:
-                text:"Submit"
-                on_release:root.img_send_to_main(filechooser.selection)
-                #on_selection: root.selected_file(filechooser.selection)
-            MDRectangleFlatButton:
-                text:"Cancel"
-                on_release:root.cancel()
-<UploadScreen>
-    id:uploadscr
-    MDBoxLayout:
-        orientation:"vertical"
-        GridLayout:
-            cols:2
-            Image:
-                id:input_img
-                source:"Input-Img.png"
-            Image:
-                id:output_img
-                source:"Output-Img.png"
-                width:100
-            MDFillRoundFlatButton:
-                text:"Foto auswählen"
-                on_release:root.show_load()
-            MDFillRoundFlatButton:
-                text:"Anpassen"
-
-
-
-
-
-
-
+                    MDFillRoundFlatButton:
+                        text:"Foto auswählen"
+                    MDFillRoundFlatButton:
+                        text:"Anpassen"
