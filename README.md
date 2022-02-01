@@ -23,7 +23,7 @@ Diese Bearbeiten:
 * buildozer android deploy... vorheriges + installiert apk direkt am Handy, wenn es angeschlossen ist + [USB-Debugging](https://mobilsicher.de/ratgeber/usb-debugging-aktivieren) aktiviert ist
 * buildozer android deploy run... vorheriges + führt App am Handy direkt aus
 * buildozer android deploy run logcat ... vorheriges + startet zusätzlich logcat
-* ... wichtige Befehle mit buildozer help
+* ... Komplette Liste an Befehlen mit buildozer help
 
 
 
